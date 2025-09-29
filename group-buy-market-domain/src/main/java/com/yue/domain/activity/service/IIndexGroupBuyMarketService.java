@@ -1,7 +1,7 @@
-package com.yue.domain.activity.service.trial;
+package com.yue.domain.activity.service;
 
-import com.yue.activity.model.entity.MarketProductEntity;
-import com.yue.activity.model.entity.TrialBalanceEntity;
+import com.yue.domain.activity.model.entity.MarketProductEntity;
+import com.yue.domain.activity.model.entity.TrialBalanceEntity;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥

@@ -1,4 +1,4 @@
-package com.yue.domain.activity.service.trial;
+package com.yue.domain.activity.service;
 
 import com.yue.domain.activity.model.entity.MarketProductEntity;
 import com.yue.domain.activity.model.entity.TrialBalanceEntity;
