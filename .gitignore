@@ -12,6 +12,11 @@ target/
 *.iml
 *.ipr
 
+# 忽略整个配置目录
+.idea/
+
+
+
 ### Eclipse ###
 .apt_generated
 .classpath
