@@ -7,6 +7,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
+
+/**
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @description 拼团活动
+ * @create 2024-12-07 10:01
+ */
 @Data
 @Builder
 @AllArgsConstructor
@@ -19,12 +25,6 @@ public class GroupBuyActivity {
     private Long activityId;
     /** 活动名称 */
     private String activityName;
-    /** 来源 */
-    private String source;
-    /** 渠道 */
-    private String channel;
-    /** 商品ID */
-    private String goodsId;
     /** 折扣ID */
     private String discountId;
     /** 拼团方式（0自动成团、1达成目标拼团） */
@@ -49,4 +49,5 @@ public class GroupBuyActivity {
     private Date createTime;
     /** 更新时间 */
     private Date updateTime;
+
 }
