@@ -1,11 +1,14 @@
 package com.yue.domain.activity.model.valobj;
 
+import com.yue.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -75,9 +78,38 @@ public class GroupBuyActivityDiscountVO {
      */
     private String tagId;
     /**
-     * 人群标签规则范围
+     * 人群标签规则范围  : 1:可见限制、2:参与限制
+     * 如果配置"1,2",即如果这个用户不在目标人群里面,就不需要看见也不允许参与
+     * 如果配置"2",就是不在目标人群里面,可以看见,不能参与
      */
     private String tagScope;
+    /**
+     * 可见限制
+     * 只要存在这样一个值，那么首次获得的默认值就是 false
+     */
+    public boolean isVisible() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        String[] split = this.tagScope.split(Constants.SPLIT);
+        //那个位置上什么都没有,就是无限制,写上1就可以限制了
+        if (split.length > 0 && Objects.equals(split[0], "1") && StringUtils.isNotBlank(split[0])) {
+            return TagScopeEnumVO.VISIBLE.getRefuse();
+        }
+        return TagScopeEnumVO.VISIBLE.getAllow();
+    }
+
+    /**
+     * 参与限制
+     * 只要存在这样一个值，那么首次获得的默认值就是 false
+     */
+    public boolean isEnable() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        String[] split = this.tagScope.split(Constants.SPLIT);
+        if (split.length == 2 && Objects.equals(split[1], "2") && StringUtils.isNotBlank(split[1])) {
+            return TagScopeEnumVO.ENABLE.getRefuse();
+        }
+        return TagScopeEnumVO.ENABLE.getAllow();
+    }
+
 
     @Getter
     @Builder
