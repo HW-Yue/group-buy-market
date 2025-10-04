@@ -6,6 +6,7 @@
 
 package com.yue.domain.activity.model.entity;
 
+import com.yue.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -37,4 +38,7 @@ public class TrialBalanceEntity {
     private Boolean isVisible;
     /** 是否可参与进团 */
     private Boolean isEnable;
+    /** 活动配置信息 */
+    private GroupBuyActivityDiscountVO groupBuyActivityDiscountVO;
+
 }

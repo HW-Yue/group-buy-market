@@ -25,4 +25,6 @@ public class MarketProductEntity {
     private String source;
     /** 来源 */
     private String channel;
+    /** 活动ID */
+    private Long activityId;
 }
