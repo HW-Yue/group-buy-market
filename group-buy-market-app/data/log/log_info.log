@@ -1,83 +1,31 @@
-25-10-03.02:03:14.611 [main            ] INFO  MarketTradeControllerTest - Starting MarketTradeControllerTest using Java 1.8.0_391 on 小林 with PID 70348 (started by 29874 in E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app)
-25-10-03.02:03:14.612 [main            ] INFO  MarketTradeControllerTest - The following 1 profile is active: "dev"
-25-10-03.02:03:15.107 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-10-03.02:03:15.109 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-10-03.02:03:15.133 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-25-10-03.02:03:15.318 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$ff1bdf15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:03:15.537 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:03:15.709 [main            ] INFO  Version                - Redisson 3.26.0
-25-10-03.02:03:16.385 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
-25-10-03.02:03:16.394 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
-25-10-03.02:03:16.422 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:03:17.548 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-10-03.02:03:17.575 [main            ] INFO  MarketTradeControllerTest - Started MarketTradeControllerTest in 3.243 seconds (JVM running for 3.88)
-25-10-03.02:03:17.766 [main            ] INFO  MarketTradeController  - 营销交易锁单:xiaofuge LockMarketPayOrderRequestDTO:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"397196654301","source":"s01","userId":"xiaofuge"}
-25-10-03.02:03:17.766 [main            ] INFO  TradeOrderService      - 拼团交易-查询未支付营销订单:xiaofuge outTradeNo:397196654301
-25-10-03.02:03:17.779 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-10-03.02:03:18.565 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-10-03.02:03:18.605 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:03:18.623 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-10-03.02:03:18.623 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:03:18.623 [main            ] INFO  MJCalculateService     - 优惠策略折扣计算:0
-25-10-03.02:03:18.627 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:03:18.629 [main            ] INFO  TradeOrderService      - 拼团交易-锁定营销优惠支付订单:xiaofuge activityId:100123 goodsId:9890001
-25-10-03.02:03:18.661 [main            ] INFO  MarketTradeController  - 交易锁单记录(新):xiaofuge marketPayOrderEntity:{"deductionPrice":90.00,"orderId":"075327849029","tradeOrderStatusEnumVO":"CREATE"}
-25-10-03.02:03:18.665 [main            ] INFO  MarketTradeControllerTest - 测试结果 req:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"397196654301","source":"s01","userId":"xiaofuge"} res:{"code":"0000","data":{"deductionPrice":90.00,"orderId":"075327849029","tradeOrderStatus":0},"info":"成功"}
-25-10-03.02:03:18.674 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-10-03.02:03:18.686 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-10-03.02:04:55.517 [main            ] INFO  MarketTradeControllerTest - Starting MarketTradeControllerTest using Java 1.8.0_391 on 小林 with PID 8336 (started by 29874 in E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app)
-25-10-03.02:04:55.518 [main            ] INFO  MarketTradeControllerTest - The following 1 profile is active: "dev"
-25-10-03.02:04:56.005 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-10-03.02:04:56.007 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-10-03.02:04:56.031 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
-25-10-03.02:04:56.271 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$702d0e59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:04:56.440 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:04:56.625 [main            ] INFO  Version                - Redisson 3.26.0
-25-10-03.02:04:57.264 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
-25-10-03.02:04:57.272 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
-25-10-03.02:04:57.301 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:04:58.462 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-10-03.02:04:58.489 [main            ] INFO  MarketTradeControllerTest - Started MarketTradeControllerTest in 3.239 seconds (JVM running for 3.775)
-25-10-03.02:04:58.693 [main            ] INFO  MarketTradeController  - 营销交易锁单:xiaofuge LockMarketPayOrderRequestDTO:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"398920525098","source":"s01","teamId":"45305401","userId":"xiaofuge"}
-25-10-03.02:04:58.693 [main            ] INFO  TradeOrderService      - 拼团交易-查询未支付营销订单:xiaofuge outTradeNo:398920525098
-25-10-03.02:04:58.708 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-10-03.02:04:59.385 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-10-03.02:04:59.409 [main            ] INFO  TradeOrderService      - 拼团交易-查询拼单进度:45305401
-25-10-03.02:04:59.415 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:04:59.427 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-10-03.02:04:59.427 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:04:59.427 [main            ] INFO  MJCalculateService     - 优惠策略折扣计算:0
-25-10-03.02:04:59.432 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:04:59.434 [main            ] INFO  TradeOrderService      - 拼团交易-锁定营销优惠支付订单:xiaofuge activityId:100123 goodsId:9890001
-25-10-03.02:04:59.467 [main            ] INFO  MarketTradeController  - 交易锁单记录(新):xiaofuge marketPayOrderEntity:{"deductionPrice":90.00,"orderId":"811830692274","tradeOrderStatusEnumVO":"CREATE"}
-25-10-03.02:04:59.471 [main            ] INFO  MarketTradeControllerTest - 测试结果 req:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"398920525098","source":"s01","teamId":"45305401","userId":"xiaofuge"} res:{"code":"0000","data":{"deductionPrice":90.00,"orderId":"811830692274","tradeOrderStatus":0},"info":"成功"}
-25-10-03.02:04:59.480 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-10-03.02:04:59.485 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-25-10-03.02:05:26.432 [main            ] INFO  MarketTradeControllerTest - Starting MarketTradeControllerTest using Java 1.8.0_391 on 小林 with PID 70740 (started by 29874 in E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app)
-25-10-03.02:05:26.432 [main            ] INFO  MarketTradeControllerTest - The following 1 profile is active: "dev"
-25-10-03.02:05:26.910 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-25-10-03.02:05:26.912 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-25-10-03.02:05:26.936 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
-25-10-03.02:05:27.182 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$ff1bdf15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:05:27.347 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:05:27.528 [main            ] INFO  Version                - Redisson 3.26.0
-25-10-03.02:05:28.179 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
-25-10-03.02:05:28.187 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
-25-10-03.02:05:28.212 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-25-10-03.02:05:29.329 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-25-10-03.02:05:29.355 [main            ] INFO  MarketTradeControllerTest - Started MarketTradeControllerTest in 3.184 seconds (JVM running for 3.738)
-25-10-03.02:05:29.546 [main            ] INFO  MarketTradeController  - 营销交易锁单:xiaofuge LockMarketPayOrderRequestDTO:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"350454070924","source":"s01","teamId":"45305401","userId":"xiaofuge"}
-25-10-03.02:05:29.546 [main            ] INFO  TradeOrderService      - 拼团交易-查询未支付营销订单:xiaofuge outTradeNo:350454070924
-25-10-03.02:05:29.559 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-10-03.02:05:30.235 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-10-03.02:05:30.262 [main            ] INFO  TradeOrderService      - 拼团交易-查询拼单进度:45305401
-25-10-03.02:05:30.268 [main            ] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:05:30.280 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
-25-10-03.02:05:30.280 [main            ] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:05:30.280 [main            ] INFO  MJCalculateService     - 优惠策略折扣计算:0
-25-10-03.02:05:30.284 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"activityId":100123,"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-10-03.02:05:30.286 [main            ] INFO  TradeOrderService      - 拼团交易-锁定营销优惠支付订单:xiaofuge activityId:100123 goodsId:9890001
-25-10-03.02:05:30.317 [main            ] INFO  MarketTradeController  - 交易锁单记录(新):xiaofuge marketPayOrderEntity:{"deductionPrice":90.00,"orderId":"927715886219","tradeOrderStatusEnumVO":"CREATE"}
-25-10-03.02:05:30.320 [main            ] INFO  MarketTradeControllerTest - 测试结果 req:{"activityId":100123,"channel":"c01","goodsId":"9890001","outTradeNo":"350454070924","source":"s01","teamId":"45305401","userId":"xiaofuge"} res:{"code":"0000","data":{"deductionPrice":90.00,"orderId":"927715886219","tradeOrderStatus":0},"info":"成功"}
-25-10-03.02:05:30.328 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-10-03.02:05:30.334 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-10-06.16:38:32.806 [main            ] INFO  Link02Test             - Starting Link02Test using Java 1.8.0_391 on 小林 with PID 68396 (started by 29874 in E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app)
+25-10-06.16:38:32.807 [main            ] INFO  Link02Test             - The following 1 profile is active: "dev"
+25-10-06.16:38:33.406 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-10-06.16:38:33.408 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-10-06.16:38:33.435 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+25-10-06.16:38:33.703 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$65cb28c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-06.16:38:33.924 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-06.16:38:34.094 [main            ] INFO  Version                - Redisson 3.26.0
+25-10-06.16:38:34.785 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
+25-10-06.16:38:34.796 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
+25-10-06.16:38:34.833 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-06.16:38:36.140 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-10-06.16:38:36.173 [main            ] INFO  Link02Test             - Started Link02Test in 3.666 seconds (JVM running for 7.683)
+25-10-06.16:38:36.318 [main            ] INFO  RuleLogic201           - link model02 RuleLogic201
+25-10-06.16:38:36.318 [main            ] INFO  RuleLogic202           - link model02 RuleLogic202
+25-10-06.16:38:36.427 [main            ] INFO  Link02Test             - 测试结果:{"age":"hi 小傅哥！"}
+25-10-06.16:39:59.190 [main            ] INFO  Link02Test             - Starting Link02Test using Java 1.8.0_391 on 小林 with PID 70360 (started by 29874 in E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app)
+25-10-06.16:39:59.190 [main            ] INFO  Link02Test             - The following 1 profile is active: "dev"
+25-10-06.16:39:59.684 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-10-06.16:39:59.687 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-10-06.16:39:59.711 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+25-10-06.16:39:59.952 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$9de4e707] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-06.16:40:00.129 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-06.16:40:00.317 [main            ] INFO  Version                - Redisson 3.26.0
+25-10-06.16:40:01.004 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
+25-10-06.16:40:01.014 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
+25-10-06.16:40:01.041 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-06.16:40:02.252 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-10-06.16:40:02.281 [main            ] INFO  Link02Test             - Started Link02Test in 3.362 seconds (JVM running for 3.917)
+25-10-06.16:40:02.392 [main            ] INFO  RuleLogic202           - link model02 RuleLogic202
+25-10-06.16:40:02.481 [main            ] INFO  Link02Test             - 测试结果:{"age":"hi 小傅哥！"}
