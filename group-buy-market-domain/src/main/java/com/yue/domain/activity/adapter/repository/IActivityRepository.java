@@ -22,4 +22,6 @@ public interface IActivityRepository {
     boolean downgradeSwich();
 
     boolean cutRange(String userId);
+
+
 }
