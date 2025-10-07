@@ -5,10 +5,10 @@ import com.yue.domain.trade.model.valobj.GroupBuyProgressVO;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
- * @description 交易订单服务接口
+ * @description 拼团交易锁单服务接口
  * @create 2025-01-05 16:42
  */
-public interface ITradeOrderService {
+public interface ITradeLockOrderService {
 
     /**
      * 查询，未被支付消费完成的营销优惠订单
@@ -35,6 +35,6 @@ public interface ITradeOrderService {
      * @param payDiscountEntity 拼团，支付优惠实体对象
      * @return 拼团，预购订单营销实体对象
      */
-    MarketPayOrderEntity lockMarketPayOrder(UserEntity userEntity, PayActivityEntity payActivityEntity, PayDiscountEntity payDiscountEntity)throws Exception;
+    MarketPayOrderEntity lockMarketPayOrder(UserEntity userEntity, PayActivityEntity payActivityEntity, PayDiscountEntity payDiscountEntity) throws Exception;
 
 }

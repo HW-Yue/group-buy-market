@@ -1,7 +1,9 @@
 package com.yue.domain.trade.adapter.repository;
 
 import com.yue.domain.trade.model.aggregate.GroupBuyOrderAggregate;
+import com.yue.domain.trade.model.aggregate.GroupBuyTeamSettlementAggregate;
 import com.yue.domain.trade.model.entity.GroupBuyActivityEntity;
+import com.yue.domain.trade.model.entity.GroupBuyTeamEntity;
 import com.yue.domain.trade.model.entity.MarketPayOrderEntity;
 import com.yue.domain.trade.model.valobj.GroupBuyProgressVO;
 
@@ -21,4 +23,9 @@ public interface ITradeRepository {
     GroupBuyActivityEntity queryGroupBuyActivityEntityByActivityId(Long activityId);
 
     Integer queryOrderCountByActivityId(Long activityId, String userId);
+
+    GroupBuyTeamEntity queryGroupBuyTeamByTeamId(String teamId);
+
+    void settlementMarketPayOrder(GroupBuyTeamSettlementAggregate groupBuyTeamSettlementAggregate);
+
 }

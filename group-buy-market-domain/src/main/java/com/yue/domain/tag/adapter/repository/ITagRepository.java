@@ -15,4 +15,5 @@ public interface ITagRepository {
 
     void updateCrowdTagsStatistics(String tagId, int count);
 
+
 }

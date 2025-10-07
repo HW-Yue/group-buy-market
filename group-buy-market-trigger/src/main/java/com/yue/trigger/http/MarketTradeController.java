@@ -13,7 +13,7 @@ import com.yue.domain.trade.model.entity.PayActivityEntity;
 import com.yue.domain.trade.model.entity.PayDiscountEntity;
 import com.yue.domain.trade.model.entity.UserEntity;
 import com.yue.domain.trade.model.valobj.GroupBuyProgressVO;
-import com.yue.domain.trade.service.ITradeOrderService;
+import com.yue.domain.trade.service.ITradeLockOrderService;
 import com.yue.types.enums.ResponseCode;
 import com.yue.types.exception.AppException;
 import com.alibaba.fastjson.JSON;
@@ -42,7 +42,7 @@ public class MarketTradeController implements IMarketTradeService {
     private IIndexGroupBuyMarketService indexGroupBuyMarketService;
 
     @Resource
-    private ITradeOrderService tradeOrderService;
+    private ITradeLockOrderService tradeOrderService;
 
     /**
      * 拼团营销锁单
