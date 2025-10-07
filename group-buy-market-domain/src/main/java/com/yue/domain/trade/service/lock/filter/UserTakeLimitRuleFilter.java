@@ -2,9 +2,9 @@ package com.yue.domain.trade.service.lock.filter;
 
 import com.yue.domain.trade.adapter.repository.ITradeRepository;
 import com.yue.domain.trade.model.entity.GroupBuyActivityEntity;
-import com.yue.domain.trade.model.entity.TradeRuleCommandEntity;
-import com.yue.domain.trade.model.entity.TradeRuleFilterBackEntity;
-import com.yue.domain.trade.service.lock.factory.TradeRuleFilterFactory;
+import com.yue.domain.trade.model.entity.TradeLockRuleCommandEntity;
+import com.yue.domain.trade.model.entity.TradeLockRuleFilterBackEntity;
+import com.yue.domain.trade.service.lock.factory.TradeLockRuleFilterFactory;
 import com.yue.types.design.framework.link.model2.handler.ILogicHandler;
 import com.yue.types.enums.ResponseCode;
 import com.yue.types.exception.AppException;
@@ -20,13 +20,13 @@ import javax.annotation.Resource;
  */
 @Slf4j
 @Service
-public class UserTakeLimitRuleFilter implements ILogicHandler<TradeRuleCommandEntity, TradeRuleFilterFactory.DynamicContext, TradeRuleFilterBackEntity> {
+public class UserTakeLimitRuleFilter implements ILogicHandler<TradeLockRuleCommandEntity, TradeLockRuleFilterFactory.DynamicContext, TradeLockRuleFilterBackEntity> {
 
     @Resource
     private ITradeRepository repository;
 
     @Override
-    public TradeRuleFilterBackEntity apply(TradeRuleCommandEntity requestParameter, TradeRuleFilterFactory.DynamicContext dynamicContext) throws Exception {
+    public TradeLockRuleFilterBackEntity apply(TradeLockRuleCommandEntity requestParameter, TradeLockRuleFilterFactory.DynamicContext dynamicContext) throws Exception {
         log.info("交易规则过滤-用户参与次数校验{} activityId:{}", requestParameter.getUserId(), requestParameter.getActivityId());
 
         GroupBuyActivityEntity groupBuyActivity = dynamicContext.getGroupBuyActivity();
@@ -39,7 +39,7 @@ public class UserTakeLimitRuleFilter implements ILogicHandler<TradeRuleCommandEn
             throw new AppException(ResponseCode.E0103);
         }
 
-        return TradeRuleFilterBackEntity.builder()
+        return TradeLockRuleFilterBackEntity.builder()
                 .userTakeOrderCount(count)
                 .build();
     }
