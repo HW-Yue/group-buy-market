@@ -27,7 +27,7 @@ public class SwitchRoot extends AbstractGroupBuyMarketSupport<MarketProductEntit
     public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
 
         String userId = requestParameter.getUserId();
-        if(repository.downgradeSwich()){
+        if(repository.downgradeSwitch()){
             throw new AppException(ResponseCode.E0003.getCode(), ResponseCode.E0003.getInfo());
         }
 

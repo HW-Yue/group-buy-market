@@ -1,8 +1,12 @@
 package com.yue.domain.activity.adapter.repository;
 
+import com.yue.domain.activity.model.entity.UserGroupBuyOrderDetailEntity;
 import com.yue.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
 import com.yue.domain.activity.model.valobj.SCSkuActivityVO;
 import com.yue.domain.activity.model.valobj.SkuVO;
+import com.yue.domain.activity.model.valobj.TeamStatisticVO;
+
+import java.util.List;
 
 /**
  * @author Fuzhengwei bugstack.cn @小傅哥
@@ -19,9 +23,14 @@ public interface IActivityRepository {
 
     boolean isTagCrowdRange(String tagId, String userId);
 
-    boolean downgradeSwich();
+    boolean downgradeSwitch();
 
     boolean cutRange(String userId);
 
+    List<UserGroupBuyOrderDetailEntity> queryInProgressUserGroupBuyOrderDetailListByOwner(Long activityId, String userId, Integer ownerCount);
+
+    List<UserGroupBuyOrderDetailEntity> queryInProgressUserGroupBuyOrderDetailListByRandom(Long activityId, String userId, Integer randomCount);
+
+    TeamStatisticVO queryTeamStatisticByActivityId(Long activityId);
 
 }
