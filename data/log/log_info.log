@@ -1441,3 +1441,88 @@ Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: 117.7
 	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
 	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153)
 	... 8 common frames omitted
+25-10-22.22:36:36.941 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on 小林 with PID 69252 (E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app\target\classes started by 29874 in E:\sfg\pintuan\group-buy-market-yue)
+25-10-22.22:36:36.942 [main            ] INFO  Application            - The following 1 profile is active: "prod"
+25-10-22.22:36:37.405 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-10-22.22:36:37.406 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-10-22.22:36:37.430 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+25-10-22.22:36:37.559 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$1f3aaa3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-22.22:36:37.590 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-22.22:36:37.699 [main            ] INFO  Version                - Redisson 3.26.0
+25-10-22.22:36:38.316 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
+25-10-22.22:36:38.323 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
+25-10-22.22:36:38.365 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-22.22:36:38.487 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-10-22.22:36:38.492 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-10-22.22:36:38.492 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-10-22.22:36:38.492 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-10-22.22:36:39.066 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-10-22.22:36:39.066 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2106 ms
+25-10-22.22:36:40.288 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-10-22.22:36:40.303 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-10-22.22:36:40.308 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-10-22.22:36:40.318 [main            ] INFO  Application            - Started Application in 3.581 seconds (JVM running for 4.37)
+25-10-22.22:36:41.028 [RMI TCP Connection(1)-100.67.209.67] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-10-22.22:36:41.028 [RMI TCP Connection(1)-100.67.209.67] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-10-22.22:36:41.029 [RMI TCP Connection(3)-100.67.209.67] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-10-22.22:36:41.029 [RMI TCP Connection(1)-100.67.209.67] INFO  DispatcherServlet      - Completed initialization in 1 ms
+25-10-22.22:36:41.258 [RMI TCP Connection(3)-100.67.209.67] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-10-22.22:36:45.001 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:36:45.151 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:37:00.016 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:37:00.018 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:37:15.001 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:37:15.004 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:37:30.004 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:37:30.006 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:37:45.005 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:37:45.008 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:38:00.004 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:38:00.007 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:38:15.014 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:38:15.015 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:38:30.002 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:38:30.004 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:38:45.011 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:38:45.012 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:39:00.009 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:39:00.011 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:39:04.148 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-10-22.22:39:04.158 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-10-22.22:39:06.410 [main            ] INFO  Application            - Starting Application using Java 1.8.0_391 on 小林 with PID 77604 (E:\sfg\pintuan\group-buy-market-yue\group-buy-market-app\target\classes started by 29874 in E:\sfg\pintuan\group-buy-market-yue)
+25-10-22.22:39:06.411 [main            ] INFO  Application            - The following 1 profile is active: "prod"
+25-10-22.22:39:06.861 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+25-10-22.22:39:06.862 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+25-10-22.22:39:06.886 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+25-10-22.22:39:07.016 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redisClientConfig' of type [com.yue.config.RedisClientConfig$$EnhancerBySpringCGLIB$$8e351acd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-22.22:39:07.050 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redis.sdk.config-com.yue.config.RedisClientConfigProperties' of type [com.yue.config.RedisClientConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-22.22:39:07.155 [main            ] INFO  Version                - Redisson 3.26.0
+25-10-22.22:39:07.765 [redisson-netty-1-5] INFO  ConnectionsHolder      - 1 connections initialized for localhost/127.0.0.1:16379
+25-10-22.22:39:07.772 [redisson-netty-1-14] INFO  ConnectionsHolder      - 5 connections initialized for localhost/127.0.0.1:16379
+25-10-22.22:39:07.807 [main            ] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'redissonClient' of type [org.redisson.Redisson] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+25-10-22.22:39:07.912 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+25-10-22.22:39:07.916 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+25-10-22.22:39:07.916 [main            ] INFO  StandardService        - Starting service [Tomcat]
+25-10-22.22:39:07.916 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+25-10-22.22:39:07.991 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+25-10-22.22:39:07.991 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1561 ms
+25-10-22.22:39:09.064 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+25-10-22.22:39:09.079 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+25-10-22.22:39:09.085 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+25-10-22.22:39:09.093 [main            ] INFO  Application            - Started Application in 2.878 seconds (JVM running for 3.722)
+25-10-22.22:39:09.559 [RMI TCP Connection(1)-100.67.209.67] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+25-10-22.22:39:09.560 [RMI TCP Connection(1)-100.67.209.67] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+25-10-22.22:39:09.560 [RMI TCP Connection(2)-100.67.209.67] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-10-22.22:39:09.560 [RMI TCP Connection(1)-100.67.209.67] INFO  DispatcherServlet      - Completed initialization in 0 ms
+25-10-22.22:39:09.741 [RMI TCP Connection(2)-100.67.209.67] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-10-22.22:39:15.002 [scheduling-1    ] INFO  TradeSettlementOrderService - 拼团交易-执行结算通知任务
+25-10-22.22:39:15.084 [scheduling-1    ] INFO  GroupBuyNotifyJob      - 定时任务，回调通知拼团完结任务 result:{"retryCount":0,"successCount":0,"waitCount":0,"errorCount":0}
+25-10-22.22:39:15.131 [http-nio-8091-exec-2] INFO  MarketIndexController  - 查询拼团营销配置开始:admin goodsId:9890001
+25-10-22.22:39:15.139 [http-nio-8091-exec-2] INFO  RootNode               - 拼团商品查询试算服务-RootNode userId:admin requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"admin"}
+25-10-22.22:39:15.189 [http-nio-8091-exec-2] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:admin 异步线程加载数据「GroupBuyActivityDiscountVO、SkuVO」完成
+25-10-22.22:39:15.189 [http-nio-8091-exec-2] INFO  MarketNode             - 拼团商品查询试算服务-MarketNode userId:admin requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"admin"}
+25-10-22.22:39:15.189 [http-nio-8091-exec-2] INFO  MJCalculateService     - 优惠策略折扣计算:0
+25-10-22.22:39:15.193 [http-nio-8091-exec-2] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:admin requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"admin"}
+25-10-22.22:39:15.239 [http-nio-8091-exec-2] INFO  MarketIndexController  - 查询拼团营销配置完成:admin goodsId:9890001 response:{"code":"0000","data":{"goods":{"deductionPrice":10.00,"goodsId":"9890001","originalPrice":100.00,"payPrice":90.00},"teamList":[],"teamStatistic":{"allTeamCompleteCount":0,"allTeamCount":4,"allTeamUserCount":4}},"info":"成功"}
+25-10-22.22:39:23.214 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-10-22.22:39:23.221 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
