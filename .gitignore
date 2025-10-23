@@ -41,5 +41,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/.idea/
-/.mvn/
+/data/log/
