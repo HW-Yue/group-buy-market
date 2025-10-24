@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>小yue - 拼团项目 - 商品详情页</title>
+    <title>小臧 - 拼团项目 - 商品详情页</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <!-- 轮播图 -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/motor1.jpg"></div>
-        <div class="swiper-slide"><img src="images/motor2.jpg"></div>
-        <div class="swiper-slide"><img src="images/motor3.jpg"></div>
+        <div class="swiper-slide"><img src="images/zang01.jpg"></div>
+        <div class="swiper-slide"><img src="images/zang02.png"></div>
+        <div class="swiper-slide"><img src="images/zang03.png"></div>
     </div>
     <div class="swiper-pagination"></div>
 </div>
 
 <!-- 商品信息 -->
 <div class="product-info">
-    <h1 class="product-title">杜卡迪v4,全金属模型</h1>
+    <h1 class="product-title">有中二病的变态（科目一没过版）</h1>
     <span class="promotion-tag">大促优惠</span>
     <span class="promotion-text"></span> <!-- 动态填充促销文本 -->
 </div>
@@ -131,9 +131,9 @@
                 // 更新底部按钮
                 const buyAloneBtn = document.querySelector('.buy-alone');
                 const groupBuyBtn = document.querySelector('.group-buy');
-                buyAloneBtn.textContent = `单独购买(￥${goods.originalPrice.toFixed(0)})`;
+                buyAloneBtn.textContent = `单独购买(￥27020)`;
                 buyAloneBtn.dataset.price = goods.originalPrice;
-                groupBuyBtn.textContent = `开团购买(￥${goods.payPrice.toFixed(0)})`;
+                groupBuyBtn.textContent = `开团购买(￥3823)`;
                 groupBuyBtn.dataset.price = goods.payPrice;
 
                 // 绑定支付事件[拼团购买]
@@ -235,7 +235,7 @@
 
         // 显示支付弹窗
         function showPaymentModal(price) {
-            paymentAmount.textContent = `支付金额：￥${price}`
+            paymentAmount.textContent = `支付金额：￥250`
             modal.style.display = "block"
         }
 
