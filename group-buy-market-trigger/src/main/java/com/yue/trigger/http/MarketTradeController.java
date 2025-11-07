@@ -12,6 +12,8 @@ import com.yue.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
 import com.yue.domain.activity.service.IIndexGroupBuyMarketService;
 import com.yue.domain.trade.model.entity.*;
 import com.yue.domain.trade.model.valobj.GroupBuyProgressVO;
+import com.yue.domain.trade.model.valobj.NotifyConfigVO;
+import com.yue.domain.trade.model.valobj.NotifyTypeEnumVO;
 import com.yue.domain.trade.service.ITradeLockOrderService;
 import com.yue.domain.trade.service.ITradeSettlementOrderService;
 import com.yue.types.enums.ResponseCode;
@@ -60,11 +62,13 @@ public class MarketTradeController implements IMarketTradeService {
             Long activityId = requestDTO.getActivityId();
             String outTradeNo = requestDTO.getOutTradeNo();
             String teamId = requestDTO.getTeamId();
-            String notifyUrl = requestDTO.getNotifyUrl();
+            LockMarketPayOrderRequestDTO.NotifyConfigVO notifyConfigVO = requestDTO.getNotifyConfigVO();
+
 
             log.info("营销交易锁单:{} LockMarketPayOrderRequestDTO:{}", userId, JSON.toJSONString(requestDTO));
 
-            if (StringUtils.isBlank(userId) || StringUtils.isBlank(source) || StringUtils.isBlank(channel) || StringUtils.isBlank(goodsId) || null == activityId || StringUtils.isBlank(notifyUrl)) {
+            if (StringUtils.isBlank(userId) || StringUtils.isBlank(source) || StringUtils.isBlank(channel) || StringUtils.isBlank(goodsId) || null == activityId || ("HTTP".equals(notifyConfigVO.getNotifyType()) && StringUtils.isBlank(notifyConfigVO.getNotifyUrl()))) {
+
                 return Response.<LockMarketPayOrderResponseDTO>builder()
                         .code(ResponseCode.ILLEGAL_PARAMETER.getCode())
                         .info(ResponseCode.ILLEGAL_PARAMETER.getInfo())
@@ -142,7 +146,14 @@ public class MarketTradeController implements IMarketTradeService {
                             .deductionPrice(trialBalanceEntity.getDeductionPrice())
                             .payPrice(trialBalanceEntity.getPayPrice())
                             .outTradeNo(outTradeNo)
-                            .notifyUrl(notifyUrl)
+                            .notifyConfigVO(
+                                    // 构建回调通知对象
+                                    NotifyConfigVO.builder()
+                                            .notifyType(NotifyTypeEnumVO.valueOf(notifyConfigVO.getNotifyType()))
+                                            .notifyMQ(notifyConfigVO.getNotifyMQ())
+                                            .notifyUrl(notifyConfigVO.getNotifyUrl())
+                                            .build())
+
                             .build());
 
             log.info("交易锁单记录(新):{} marketPayOrderEntity:{}", userId, JSON.toJSONString(marketPayOrderEntity));

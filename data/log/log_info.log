@@ -30,3 +30,8 @@
 25-11-06.17:17:35.594 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231236
 25-11-06.17:31:40.809 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231234
 25-11-06.17:31:40.837 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  TeamSuccessTopicListener - 接收消息:订单结算：ORD-20231236
+25-11-06.17:55:37.639 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+25-11-06.17:55:37.899 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+25-11-06.17:55:38.336 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+25-11-06.17:55:38.382 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-11-06.17:55:38.643 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
